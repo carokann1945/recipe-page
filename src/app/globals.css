@@ -8,7 +8,20 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-pretendard: var(--font-pretendard), ui-sans-serif, system-ui, sans-serif;
+  --font-youngSerif: var(--font-young-serif), sans-serif;
+  --font-outfit: var(--font-outfit), sans-serif;
+  /* Rose */
+  --color-rose-800: #7a284e;
+  --color-rose-50: #fff7fb;
+
+  /* Stone */
+  --color-stone-900: #312e2c;
+  --color-stone-600: #5f564d;
+  --color-stone-150: #e3ddd7;
+  --color-stone-100: #f3e5d7;
+
+  /* Brown */
+  --color-brown-800: #854632;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,8 +31,42 @@
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-pretendard);
+@utility text-preset-1 {
+  font-family: var(--font-youngSerif);
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-2 {
+  font-family: var(--font-youngSerif);
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-3 {
+  font-family: var(--font-outfit);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-4 {
+  font-family: var(--font-outfit);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
+}
+
+@utility text-preset-4-bold {
+  font-family: var(--font-outfit);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0px;
 }

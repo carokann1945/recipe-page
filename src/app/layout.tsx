@@ -1,10 +1,18 @@
 import type { Metadata } from 'next';
-import localFont from 'next/font/local';
+import { Young_Serif, Outfit } from 'next/font/google';
 import './globals.css';
 
-const pretendard = localFont({
-  src: '../../public/fonts/PretendardVariable.woff2', // 폰트 파일 경로 설정
-  variable: '--font-pretendard', // css 변수명을 정의하여 Tailwind CSS 등에서 사용할 수 있음
+const youngSerif = Young_Serif({
+  weight: ['400'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-young-serif',
+});
+
+const outfit = Outfit({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-outfit',
 });
 
 export const metadata: Metadata = {
@@ -18,8 +26,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={pretendard.variable}>
-      <body className="antialiased">{children}</body>
+    <html lang="en" className={`${youngSerif.variable} ${outfit.variable}`}>
+      <body className="antialiased bg-stone-100 min-h-dvh md:py-[128px] md:px-[48px]">{children}</body>
     </html>
   );
 }
